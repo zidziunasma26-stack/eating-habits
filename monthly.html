@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food of the Month</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Food of the Month</h1></header>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h2>Monthly Pick</h2>
+    <p id="monthFood">Click to generate!</p>
+    <button onclick="pick()">Pick Food</button>
+</div>
+
+<script>
+const foods = ["Blueberries", "Sweet Potatoes", "Spinach", "Oats", "Almonds"];
+
+function pick() {
+    const random = foods[Math.floor(Math.random() * foods.length)];
+    document.getElementById("monthFood").innerText = random;
+}
+</script>
+
+</body>
+</html>
