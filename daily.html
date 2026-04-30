@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food of the Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Food of the Day</h1></header>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+    <h2>Spin for Today’s Food</h2>
+    <p id="result">Click the button!</p>
+    <button onclick="spin()">Spin</button>
+</div>
+
+<script>
+const foods = ["Salmon", "Chicken", "Quinoa", "Eggs", "Avocado", "Yogurt"];
+
+function spin() {
+    const random = foods[Math.floor(Math.random() * foods.length)];
+    document.getElementById("result").innerText = random;
+}
+</script>
+
+</body>
+</html>
